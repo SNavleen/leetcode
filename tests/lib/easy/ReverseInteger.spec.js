@@ -11,7 +11,7 @@ describe('Reverse Integer', () => {
 
   before(() => {});
   beforeEach(() => {
-    ReverseInteger = rewire('../../lib/easy/ReverseInteger');
+    ReverseInteger = rewire('../../../lib/easy/ReverseInteger');
     reverse = ReverseInteger.__get__('reverse');
   });
   after(() => {});
@@ -19,11 +19,11 @@ describe('Reverse Integer', () => {
     sandbox.reset();
   });
 
-  it('input 123 output 321', ()=> {
+  it('input 123 -> output 321', ()=> {
     expect(reverse(123)).to.eql(321);
   });
   
-  it('input 1534236469 output 0', ()=> {
+  it('input 1534236469 -> output 0', ()=> {
     expect(reverse(1534236469)).to.eql(0);
   });
 });

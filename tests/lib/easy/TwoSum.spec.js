@@ -11,7 +11,7 @@ describe('Two Sum', () => {
 
   before(() => {});
   beforeEach(() => {
-    TwoSum = rewire('../../lib/easy/TwoSum');
+    TwoSum = rewire('../../../lib/easy/TwoSum');
     twoSum = TwoSum.__get__('twoSum');
   });
   after(() => {});
@@ -19,7 +19,7 @@ describe('Two Sum', () => {
     sandbox.reset();
   });
   
-  it('output [0, 1]', ()=> {
+  it('input [2, 7, 11, 15], 9 -> output [0, 1]', ()=> {
     let nums = [2, 7, 11, 15];
     let target = 9;
     expect(twoSum(nums, target)).to.eql([0, 1]);
