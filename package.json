@@ -17,7 +17,9 @@
     "rewire": "^5.0.0",
     "sinon": "^10.0.0"
   },
-  "hooks": {
-    "pre-commit": "npm test"
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm test"
+    }
   }
 }
