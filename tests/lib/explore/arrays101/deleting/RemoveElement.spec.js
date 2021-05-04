@@ -9,29 +9,29 @@ describe('Remove Element', () => {
   let RemoveElement;
   let removeElement;
 
-  before(() => {});
+  before(() => { });
   beforeEach(() => {
-    RemoveElement = rewire('../../../../lib/explore/arrays101/RemoveElement');
+    RemoveElement = rewire('../../../../../lib/explore/arrays101/deleting/RemoveElement');
     removeElement = RemoveElement.__get__('removeElement');
   });
-  after(() => {});
+  after(() => { });
   afterEach(() => {
     sandbox.reset();
   });
-  
-  it('input [3,2,2,3] -> output [2,2]', ()=> {
-    let nums = [3,2,2,3];
+
+  it('input [3,2,2,3] -> output [2,2]', () => {
+    let nums = [3, 2, 2, 3];
     let val = 3;
     let numsLength = removeElement(nums, val);
     expect(numsLength).to.eql(2);
     expect(nums).to.eql([2, 2]);
   });
-  
-  it('input [0,1,2,2,3,0,4,2] -> output [0,1,4,0,3]', ()=> {
-    let nums = [0,1,2,2,3,0,4,2];
+
+  it('input [0,1,2,2,3,0,4,2] -> output [0,1,4,0,3]', () => {
+    let nums = [0, 1, 2, 2, 3, 0, 4, 2];
     let val = 2;
     let numsLength = removeElement(nums, val);
     expect(numsLength).to.eql(5);
-    expect(nums).to.eql([0,1,3,0,4]);
+    expect(nums).to.eql([0, 1, 3, 0, 4]);
   });
 });

@@ -9,18 +9,18 @@ describe('Find Numbers With Even Number Of Digits', () => {
   let FindNumbersWithEvenNumberOfDigits;
   let findNumbers;
 
-  before(() => {});
+  before(() => { });
   beforeEach(() => {
-    FindNumbersWithEvenNumberOfDigits = rewire('../../../../lib/explore/arrays101/FindNumbersWithEvenNumberOfDigits');
+    FindNumbersWithEvenNumberOfDigits = rewire('../../../../../lib/explore/arrays101/intro/FindNumbersWithEvenNumberOfDigits');
     findNumbers = FindNumbersWithEvenNumberOfDigits.__get__('findNumbers');
   });
-  after(() => {});
+  after(() => { });
   afterEach(() => {
     sandbox.reset();
   });
-  
-  it('input [12,345,2,6,7896] -> output 2', ()=> {
-    let nums = [12,345,2,6,7896];
+
+  it('input [12,345,2,6,7896] -> output 2', () => {
+    let nums = [12, 345, 2, 6, 7896];
     expect(findNumbers(nums)).to.eql(2);
   });
 });

@@ -9,18 +9,18 @@ describe('Squares Of A Sorted Array', () => {
   let SquaresOfASortedArray;
   let sortedSquares;
 
-  before(() => {});
+  before(() => { });
   beforeEach(() => {
-    SquaresOfASortedArray = rewire('../../../../lib/explore/arrays101/SquaresOfASortedArray');
+    SquaresOfASortedArray = rewire('../../../../../lib/explore/arrays101/intro/SquaresOfASortedArray');
     sortedSquares = SquaresOfASortedArray.__get__('sortedSquares');
   });
-  after(() => {});
+  after(() => { });
   afterEach(() => {
     sandbox.reset();
   });
-  
-  it('input [-4,-1,0,3,10] -> output [0,1,9,16,100]', ()=> {
-    let nums = [-4,-1,0,3,10];
-    expect(sortedSquares(nums)).to.eql([0,1,9,16,100]);
+
+  it('input [-4,-1,0,3,10] -> output [0,1,9,16,100]', () => {
+    let nums = [-4, -1, 0, 3, 10];
+    expect(sortedSquares(nums)).to.eql([0, 1, 9, 16, 100]);
   });
 });

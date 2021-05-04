@@ -9,18 +9,18 @@ describe('Remove Duplicates from Sorted Array', () => {
   let RemoveDuplicatesfromSortedArray;
   let removeDuplicates;
 
-  before(() => {});
+  before(() => { });
   beforeEach(() => {
-    RemoveDuplicatesfromSortedArray = rewire('../../../../lib/explore/arrays101/RemoveDuplicatesfromSortedArray');
+    RemoveDuplicatesfromSortedArray = rewire('../../../../../lib/explore/arrays101/deleting/RemoveDuplicatesfromSortedArray');
     removeDuplicates = RemoveDuplicatesfromSortedArray.__get__('removeDuplicates');
   });
-  after(() => {});
+  after(() => { });
   afterEach(() => {
     sandbox.reset();
   });
-  
-  it('input [1,1,2] -> output [1,2]', ()=> {
-    let nums = [1,1,2];
+
+  it('input [1,1,2] -> output [1,2]', () => {
+    let nums = [1, 1, 2];
     let numsLength = removeDuplicates(nums);
     expect(numsLength).to.eql(2);
     expect(nums).to.eql([1, 2]);

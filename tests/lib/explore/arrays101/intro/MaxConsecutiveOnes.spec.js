@@ -9,18 +9,18 @@ describe('Max Consecutive Ones', () => {
   let MaxConsecutiveOnes;
   let findMaxConsecutiveOnes;
 
-  before(() => {});
+  before(() => { });
   beforeEach(() => {
-    MaxConsecutiveOnes = rewire('../../../../lib/explore/arrays101/MaxConsecutiveOnes');
+    MaxConsecutiveOnes = rewire('../../../../../lib/explore/arrays101/intro/MaxConsecutiveOnes');
     findMaxConsecutiveOnes = MaxConsecutiveOnes.__get__('findMaxConsecutiveOnes');
   });
-  after(() => {});
+  after(() => { });
   afterEach(() => {
     sandbox.reset();
   });
-  
-  it('input [1,1,0,1,1,1] -> output 3', ()=> {
-    let nums = [1,1,0,1,1,1];
+
+  it('input [1,1,0,1,1,1] -> output 3', () => {
+    let nums = [1, 1, 0, 1, 1, 1];
     expect(findMaxConsecutiveOnes(nums)).to.eql(3);
   });
 });
